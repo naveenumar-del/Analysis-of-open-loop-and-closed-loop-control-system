@@ -17,10 +17,29 @@ C(S) and G(S) are in series, 300/(S^2+10S+20)
 Therefore, Closed loop transfer function, (C(S))/(R(S))=300/(S^2+10S+320)
 ## Program: 
 ### Open loop System
+```
+num[1]
+den[1 10 20]
+sys=tf(num,den)
+step(sys)
+```
 
 ### Closed loop System
+```
+num[300]
+den[1 10 320]
+sys=tf(num,den)
+step(sys)
+```
 
 ## Simulink:
+### Open loop system:
+<img width="738" height="202" alt="Open loop" src="https://github.com/user-attachments/assets/f4b969c2-adb0-4dfe-b83d-fbd1343d5504" />
+
+### Close Loop system:
+<img width="990" height="195" alt="close loop" src="https://github.com/user-attachments/assets/d16048eb-8d33-4428-9e43-92c3a290abad" />
+
+
 
 ## Procedure:
 	Open MATLAB software
@@ -30,15 +49,19 @@ Therefore, Closed loop transfer function, (C(S))/(R(S))=300/(S^2+10S+320)
 	Analyse the result.
 ## Output:
 ### Open Loop System:
+<img width="698" height="527" alt="Open loop 1" src="https://github.com/user-attachments/assets/14882413-c71a-4523-9af9-765130fe5b57" />
+
 ### Closed Loop System:
+<img width="695" height="520" alt="close loop (2)" src="https://github.com/user-attachments/assets/96757280-3e77-4cd3-97b0-81a3d97b5776" />
+
 ## Result:
 Thus the open loop and closed loop system are analysed and the following conclusions are arrived.
 ### Open loop system
-Steady State Error = <br>
-Settling Time = 
+Steady State Error = 0.95 <br>
+Settling Time = 2.5s
 ### Closed loop System
-Steady State Error = <br>
-Settling Time = 
+Steady State Error = 0.05 <br>
+Settling Time = 1.2s
 
 
 
